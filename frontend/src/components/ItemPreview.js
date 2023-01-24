@@ -37,7 +37,7 @@ const ItemPreview = (props) => {
     >
       <img
         alt="item"
-        src={item.image}
+        src={item.image || "/placeholder.png"}
         className="card-img-top item-img"
         style={{ borderRadius: "20px" }}
       />
@@ -51,7 +51,7 @@ const ItemPreview = (props) => {
             <img
               src={item.seller.image}
               alt={item.seller.username}
-              className="user-pic2 rounded-circle pr-1"
+              className="user-pic rounded-circle pr-1"
             />
           </Link>
           <button className="btn btn-outline-secondary" onClick={handleClick}>
